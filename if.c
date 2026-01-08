@@ -109,3 +109,43 @@ int main()
         printf("you have failed the class");
 }
 
+
+/*
+3. Calculate income tax paid by an employee to the government as per the slabs
+mentioned below:
+ Income Slab Tax
+ 2.5 – 5.0L 5%
+ 5.0L - 10.0L 20%
+ Above 10.0L 30%
+Note that there is no tax below 2.5L. Take income amount as an input from the user.
+*/
+
+#include<stdio.h>
+
+int main(){
+
+    int income;
+    printf("entre your annual income:\n");
+    scanf("%d" , &income);
+    
+    if (income<250000)
+    {
+        printf("your do not have to pay any income tax");
+    }
+    else if (income>=250000 && income<500000)
+    {
+        printf("you will ahve to pay 5%% of income tax\n which is %d", (income*5)/100);
+    }
+    else if (income>=500000 && income<1000000)
+    {
+        printf("YOU WILL HAVE TO PAY 20%% OF INCOME TAX\n which is %d", (income*20)/100);
+    }
+    else
+    {
+        printf("you will ahve to pay 30%% of income tax\n which is %d", (income*30)/100);
+    }
+    
+    
+return 0;
+
+}
